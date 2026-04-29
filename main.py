@@ -29,7 +29,7 @@ if error_message:
 else:
     with open(file_name_time, "w") as file:
         json.dump(data, file)
-    print(f"File {file_name_time} was succesfully created! Woohoo 🥳")
+    print(f"File {file_name_time} was succesfully created! Woohoo")
 
 
 
