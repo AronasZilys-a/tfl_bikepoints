@@ -46,7 +46,7 @@ for file in files:
     try:
         s3_client.upload_file(file,BUCKET,filename)
         logger.info(f'{file} uploaded to s3')
-        
+        s3_client.head_object(Bucket=BUCKET,Key=filename)
         os.remove(file)
         logger.info(f'{file} deleted locally')
         processed += 1
